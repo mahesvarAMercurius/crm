@@ -81,7 +81,7 @@ public class TranController extends HttpServlet {
     }
 
     private void getTranHistoryListById(HttpServletRequest request, HttpServletResponse response) {
-        System.out.println("交易历史");
+        System.out.println("执行根据交易Id查询交易历史的操作");
         String id = request.getParameter("id");
         TranService ts = (TranService) ServicesFactory.getService(new TranServiceImpl());
         List<TranHistory> thList = ts.getTranHistoryListById(id);
